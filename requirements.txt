@@ -8,3 +8,9 @@ pytz
 fastapi
 uvicorn
 requests
+
+requests
+psycopg2-binary
+beautifulsoup4
+fastapi
+uvicorn
