@@ -10,6 +10,13 @@ app = FastAPI()
 APP_ID = os.environ.get("FEISHU_APP_ID")
 APP_SECRET = os.environ.get("FEISHU_APP_SECRET")
 
+# main.py 的开头部分
+@app.get("/")
+async def root():
+    return {"message": "Server is running"}
+
+# 下面保留你原来的 @app.post("/feishu/webhook")
+
 def get_tenant_access_token():
     """获取飞书 API 调用凭证"""
     url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal"
